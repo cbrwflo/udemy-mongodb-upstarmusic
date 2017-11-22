@@ -22,9 +22,6 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, './sass')]
-  },
   module: {
     loaders: [
       {
