@@ -6,4 +6,13 @@ const Artist = require('../models/artist');
  * containing the min and max yearsActive, like { min: 0, max: 14 }.
  */
 module.exports = () => {
+  return Artist.collection.aggregate([
+    { 
+      $group: {
+      _id: null,
+      max: { $max: '$yearsActive' },
+      min: { $min: '$yearsActive' }
+      }
+    }
+  ]);
 };
