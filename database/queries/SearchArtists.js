@@ -50,4 +50,4 @@ const buildQuery = (criteria) => {
   }
 
   return query;
-}
+};
